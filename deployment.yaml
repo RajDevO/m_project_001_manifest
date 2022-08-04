@@ -1,25 +1,25 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: flaskdemo
-  name: flaskdemo
+    app: webapp
+  name: webapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: flaskdemo
+      app: webapp
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: flaskdemo
+        app: webapp
     spec:
       containers:
       - image: kuberaj/project_001:latest
-        name: flaskdemo
+        name: webapp
         resources: {}
 status: {}
 ---
@@ -35,4 +35,4 @@ spec:
   - port: 80
     targetPort: 5000
   selector:
-    app: flaskdemo
+    app: webapp
