@@ -23,9 +23,5 @@ node {
       }
     }
   }
-}
-    
-    stage('Deploying the app on K8s'){
-        kubernetesDeploy (configs: 'deployment.yaml', kubeconfigId: 'kubeconfig')
     }
 }
