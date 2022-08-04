@@ -18,7 +18,7 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: kuberaj/project_001:57
+      - image: kuberaj/project_001:58
         name: webapp
         resources: {}
 status: {}
