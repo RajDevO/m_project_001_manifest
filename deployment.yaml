@@ -8,7 +8,7 @@ metadata:
   name: webapp
 spec:
   replicas: 3
-   selector:
+  selector:
     matchLabels:
       app: webapp
   strategy: {}
