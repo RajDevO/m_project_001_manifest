@@ -24,10 +24,6 @@ node {
     }
   }
 }
-    stage('Deployement preparation') {
-                echo "triggering updatemanifestjob"
-                build job: 'k8s_deployment_001', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
-        }
-   
+    
      
  }
