@@ -18,7 +18,7 @@ node {
                         sh "sed -i 's+kuberaj/project_001.*+kuberaj/project_001:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
                         sh "git add ."
-                        sh "git commit -m 'Ready for deployment': ${env.BUILD_NUMBER}'"
+                        sh "git commit -m 'Ready for deployment: ${env.BUILD_NUMBER}'"
                         sh "git push https://github.com/RajDevO/m_project_001_manifest.git HEAD:main"
       }
     }
