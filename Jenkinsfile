@@ -26,7 +26,7 @@ node {
 }
      stage('Deploying the app on K8s'){
                         sshagent(['k8s']) {
-                            sh "scp -o StrictHostKeyChecking=no depoyement.yaml ubuntu@34.201.145.207:/home/ubuntu"
+                            sh "scp -o StrictHostKeyChecking=no deployment.yaml ubuntu@34.201.145.207:/home/ubuntu"
                             script {
                                     try{
                                     sh "ssh ubuntu@34.201.145.207 kubectl create -f ."
