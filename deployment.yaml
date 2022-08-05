@@ -1,11 +1,12 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployement
 metadata:
   creationTimestamp: null
   labels:
     app: webapp
   name: webapp
 spec:
+  replicas: 3
    selector:
     matchLabels:
       app: webapp
