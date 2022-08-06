@@ -26,12 +26,13 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  name: NodePort
+  name: lb-service
+  labels:
+    app: lb-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 5000
-    nodePort: 32000
   selector:
     app: webserver
