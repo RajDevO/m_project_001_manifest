@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployement
 metadata:
@@ -11,7 +10,7 @@ spec:
   selector:
     matchLabels:
       app: webapp
-  strategy: {}
+  strategy:
   template:
     metadata:
       creationTimestamp: null
@@ -36,4 +35,3 @@ spec:
     nodePort: 32000
   selector:
     app: webapp
-    ---
