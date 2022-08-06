@@ -26,7 +26,7 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  name: webserver
+  name: nodeport_svc
 spec:
   type: NodePort
   ports:
