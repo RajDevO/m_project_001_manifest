@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: flaskdemo
-  name: flaskdemo
+    app: webserver
+  name: webserver
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: flaskdemo
+      app: webserver
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: flaskdemo
+        app: webserver
     spec:
       containers:
       - image: kuberaj/project_001:147
-        name: flaskdemo
+        name: webserver
         resources: {}
 status: {}
 ---
