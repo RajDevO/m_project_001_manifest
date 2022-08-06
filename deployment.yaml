@@ -53,5 +53,5 @@ spec:
  ports:
  - nodePort: 32410
    protocol: TCP
-   port: 8082
-   targetPort: 82
+   port: 80
+   targetPort: 80
