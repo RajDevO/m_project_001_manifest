@@ -18,7 +18,7 @@ spec:
         app: webserver
     spec:
       containers:
-      - image: kuberaj/project_001:150
+      - image: kuberaj/project_001:154
         name: webserver
         resources: {}
 status: {}
