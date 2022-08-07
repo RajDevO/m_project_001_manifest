@@ -20,6 +20,9 @@ spec:
       containers:
       - image: kuberaj/project_001:162
         name: webserver
+        ports:
+        - containerPort: 8082
+          protocol: TCP
 status: {}
 ---
 apiVersion: v1
