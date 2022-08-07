@@ -41,14 +41,15 @@ spec:
 ---
 apiVersion: v1
 kind: Service
+type:
 metadata:
-  name: np-service
   labels:
-    run: webserver
+    name: npsvc
 spec:
-  type: NodePort
   ports:
-  - port: 8082
-    protocol: TCP
+  - name: "82"
+    port: 8888
+    targetPort: 82
   selector:
-    run: webserver
+    name: webserver
+  type: NodePort
