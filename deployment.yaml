@@ -43,10 +43,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: np-service
+  labels:
+    run: webserver
 spec:
-  selector:
-    app.kubernetes.io/name: webserver
+  type: NodePort
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
+  - port: 8080
+    protocol: TCP
+  selector:
+    run: webserver
