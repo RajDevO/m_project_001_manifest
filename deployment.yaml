@@ -21,7 +21,8 @@ spec:
       - image: kuberaj/project_001:156
         name: webserver
         resources: {}
-        - containerPort: 84
+    ports:
+       - containerPort: 84
 status: {}
 ---
 apiVersion: v1
