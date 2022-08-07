@@ -18,11 +18,9 @@ spec:
         app: webserver
     spec:
       containers:
-      - image: kuberaj/project_001:158
+      - image: raj80dockerid/test:6
         name: webserver
-        ports: 
-        - containerPort: 80
-        - containerPort: 443
+        resources: {}
 status: {}
 ---
 apiVersion: v1
