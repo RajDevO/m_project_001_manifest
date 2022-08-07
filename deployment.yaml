@@ -36,3 +36,17 @@ spec:
     targetPort: 5000
   selector:
     app: webserver
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: np-service
+  labels:
+    run: webserver
+spec:
+  type: NodePort
+  ports:
+  - port: 8082
+    protocol: TCP
+  selector:
+    run: webserver
