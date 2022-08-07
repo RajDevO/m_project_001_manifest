@@ -33,23 +33,8 @@ spec:
   type: LoadBalancer
   externalIPs:
   - 10.0.2.15
-   ports:
+  ports:
   - port: 82
     targetPort: 5000
   selector:
     app: webserver
----
-apiVersion: v1
-kind: Service
-metadata:
- name: nodesvc
-spec:
- type: NodePort
- selector:
-   app: webserver
-   env: prod
- ports:
- - nodePort: 32410
-   protocol: TCP
-   port: 80
-   targetPort: 80
