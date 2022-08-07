@@ -20,8 +20,7 @@ spec:
       containers:
       - image: kuberaj/project_001:156
         name: webserver
-        resources: {}
-         ports: 
+        ports: 
         - containerPort: 80
         - containerPort: 443
 status: {}
@@ -29,13 +28,12 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  name: lbservice
+  name: webserver
 spec:
-  selector:
-    app: webserver
+  type: NodePort
   ports:
-  - name: http
-    protocol: TCP
-    port: 80
-    targetPort: 8080
-  type: LoadBalancer
+  - port: 80
+    targetPort: 5000
+    nodePort: 32000
+  selector:
+    app: websrver
