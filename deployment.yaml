@@ -31,6 +31,8 @@ metadata:
     app: lb-service
 spec:
   type: LoadBalancer
+  externalIPs:
+  - 10.0.2.15
    ports:
   - port: 82
     targetPort: 5000
