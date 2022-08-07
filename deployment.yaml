@@ -18,7 +18,7 @@ spec:
         app: webserver
     spec:
       containers:
-      - image: kuberaj/project_001:168
+      - image: kuberaj/project_001:169
         name: webserver
         ports:
         - containerPort: 80
