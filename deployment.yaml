@@ -41,15 +41,12 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-type: NodePort
 metadata:
-  labels:
-    name: npsvc
+  name: np-service
 spec:
-  ports:
-  - name: "82"
-    port: 8888
-    targetPort: 82
   selector:
-    name: webserver
-  type: NodePort
+    app.kubernetes.io/name: webserver
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
