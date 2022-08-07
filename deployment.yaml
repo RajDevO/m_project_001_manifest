@@ -28,7 +28,7 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  name: webserver
+  name: loadbalancer
 spec:
   type: NodePort
   ports:
