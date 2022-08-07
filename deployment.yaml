@@ -36,9 +36,7 @@ spec:
     targetPort: 5000
   selector:
     app: webserver
-    
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
